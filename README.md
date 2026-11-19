@@ -95,9 +95,18 @@ Classic Control Panel pages that Explorer hosts in a second process — **Progra
 
 Some apps restart themselves after they are killed (Steam is the common example). Windows 11’s own End task has the same limit.
 
-## Antivirus
+## VirusTotal
 
-The injector uses `CreateRemoteThread` and `LoadLibrary` inside `explorer.exe`. That technique is also used by malware, so some scanners flag the injector or the DLL. The source in this repository is what those binaries are built from. If a scanner complains, allow `%LOCALAPPDATA%\TaskbarEnd\`.
+Scans of the [v1.0.0](https://github.com/Suedama86/TaskbarEnd/releases/tag/v1.0.0) files, 19 November 2026.
+
+| File | Engines | Report |
+| --- | --- | --- |
+| `TaskbarEndInjector.exe` | ![0 of 71](https://img.shields.io/badge/0%2F71-undetected-brightgreen) | [Open report](https://www.virustotal.com/gui/file/6d9a2016899ecdbddf06de49b6b93e0e2744daff548acb208c9aa578ac173fba) |
+| `TaskbarEndHook.dll` | ![1 of 71](https://img.shields.io/badge/1%2F71-Cynet%20only-yellow) | [Open report](https://www.virustotal.com/gui/file/d5873cee4651e0e99a0de427a2f92a3eca10e0dd7c070c7d06798fb472bb2780) |
+
+Cynet is the one detection. It labels the DLL with a machine-learning score, not a named malware family. Its rules treat the keyboard hook, `GetAsyncKeyState`, and `TerminateProcess` as suspicious. Avast, Bitdefender, CrowdStrike, ESET, and the other 66 engines left both files undetected.
+
+A new build has new hashes, so these reports apply only to v1.0.0.
 
 ## Layout
 
