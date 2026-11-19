@@ -1,4 +1,4 @@
-# TaskbarEnd
+# TaskbarEnd For Windows 10
 
 Right-click a running app on the Windows 10 taskbar and end it, the same idea as Windows 11’s built-in **End task**.
 
