@@ -16,18 +16,20 @@ This is an independent project. It is not a fork of any other taskbar utility.
 
 ## Requirements
 
-- Windows 10, 64-bit (also runs on Windows 11, next to the built-in command)
-- An account that can approve one UAC prompt during setup
+- Windows 10, 64-bit. It also runs on Windows 11, next to the built-in command.
+- A release zip needs nothing else. Building from source needs Visual Studio 2022 or 2026 with the Desktop development with C++ workload.
 
-## Install
+## Download
 
-From a copy of this repository:
+The ready-to-run build is on [Releases](https://github.com/Suedama86/TaskbarEnd/releases). Unzip it and run `setup.bat`. That copies TaskbarEnd to `%LOCALAPPDATA%\TaskbarEnd\`, starts it with Windows, and loads it into the current `explorer.exe`.
+
+## Install from source
 
 ```bat
 scripts\setup.bat
 ```
 
-Setup asks for administrator once. It builds if needed, copies the files to `%LOCALAPPDATA%\TaskbarEnd\`, registers autostart, and injects into the current `explorer.exe`.
+That script asks for administrator once, builds if needed, then installs the same way as the release zip.
 
 ## Use
 
